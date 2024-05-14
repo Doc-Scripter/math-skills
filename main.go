@@ -14,7 +14,7 @@ func main() {
 	// check the arguments format
 	if len(os.Args) <= 1 || os.Args[1] == "" || len(os.Args[2:]) != 0 {
 		fmt.Println("Usage := go run . data.txt")
-		os.Exit(0)
+		os.Exit(0)y
 	}
 	if os.Args[1] != "data.txt" {
 		fmt.Println("Application only accepts file data.txt")

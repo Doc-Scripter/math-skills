@@ -1,15 +1,14 @@
-    ##math-skills
- 
-    ##Description
+ # math-skills
+ ## Description
 
     This is a simple go program that calculates the Average,Median,Variance and standard Deviation of  stastical data for a population scenario
 
 
-    ##packages
+## packages
     only standard go packages are allowed
 
 
-    ##Installation
+## Installation
     
     clone into this repo by entering this into the terminal
 
@@ -20,7 +19,7 @@
 
     ##Running the program
 
-    #step 1
+ ### step 1
     Firstly enter a set of data in the data.txt file
     The format to write data is:
     189
@@ -30,7 +29,7 @@
     145
     110
      
-    #step 2
+ ### step 2
 
     to run the program enter this into the terninal
 

@@ -7,11 +7,11 @@ import (
 )
 
 // function to check input file
-func CheckInput(s string) {
+func CheckInput(s string) []float64{
 	numStr := strings.Fields(s)
 
 	// check if there is overflow in input data
-	v, err := Overflow(s)
+	v, err,numbers := Overflow(s)
 	if err != nil {
 		fmt.Println("the data  is not a number")
 		os.Exit(0)
@@ -53,4 +53,5 @@ func CheckInput(s string) {
 		os.Exit(0)
 
 	}
+	return numbers
 }

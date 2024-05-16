@@ -1,28 +1,18 @@
 package operations
 
 import (
-	"fmt"
-	"math"
 	"sort"
-	"strconv"
-	"strings"
 )
 
 // function to get the median
 func Median(s string) float64 {
-	var numbr []int
+	var numbr []float64
 
-	numStr := strings.Fields(s)
-	for i := range numStr {
-		num, err := strconv.ParseFloat(numStr[i], 64)
-		if err != nil {
-			fmt.Println("Can not convert", err)
-		}
-		numbr = append(numbr, int(math.Round(num)))
-
+	for _, v := range Convert(s) {
+		numbr = append(numbr, (v))
 	}
 	// sort the numbers in order from least
-	sort.Ints(numbr)
+	sort.Float64s(numbr)
 
 	// get the median when numbers are even or odd
 	if len(numbr)%2 != 0 {

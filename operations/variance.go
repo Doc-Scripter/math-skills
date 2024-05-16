@@ -1,26 +1,18 @@
 package operations
 
 import (
-	"strconv"
 	"strings"
 )
 
 func Variance(s string) float64 {
 	average := Average(s)
 
-	var num []float64
+	// var num []float64
 	var result []float64
 	var finalresult float64
 
 	numStr := strings.Fields(s)
-	for i := range numStr {
-		numbr, err := strconv.ParseFloat(numStr[i], 64)
-		if err != nil {
-			return 0
-		}
-		num = append(num, numbr)
-
-	}
+	num := Convert(s)
 	// calculate the variance
 	for i := range num {
 		v := average - num[i]
@@ -31,7 +23,7 @@ func Variance(s string) float64 {
 		finalresult += result[i]
 	}
 	// minus 1 to avoid biasness in the calculation
-	finalresult = finalresult / float64(len(numStr)-1)
+	finalresult = finalresult / float64(len(numStr))
 
 	return finalresult
 }

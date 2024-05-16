@@ -53,6 +53,6 @@ func main() {
 	// round to the nearest interger
 	fmt.Println("Average:", int(math.Round(Average)))
 	fmt.Println("Median:", int(math.Round(Median)))
-	fmt.Println("Variance: ", int(math.Round(Variance)))
+	fmt.Println("Variance:", int(math.Round(Variance)))
 	fmt.Println("Standard Deviation:", int(math.Round(StandardDev)))
 }
